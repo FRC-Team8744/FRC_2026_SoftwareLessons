@@ -1,6 +1,6 @@
 # FRC_2026_SoftwareLessons
 
-This is just an outline of the season lessons for now.  It will eventaully be removed.
+This is just an outline of the season lessons for now.  It will eventually be removed.
 
 Requirements for Test code:
 * open loop speed control for motors
@@ -70,4 +70,47 @@ gantt
 
     section Outreach Events
     Science Fest    :milestone, 2025-10-17, 2h
+```
+
+Test Class Diagram
+```mermaid
+---
+title Generic Robot Code (Kitbot 2025)
+---
+classDiagram
+    RobotContainer <|-- DriveSubsystem
+    RobotContainer <|-- RollerSubsystem
+    RobotContainer <|-- AutoCommand
+    RobotContainer <|-- AutoScoreCoral
+    DriveSubsystem <-- AutoCommand
+    DriveSubsystem <-- AutoScoreCoral
+    RollerSubsystem <-- AutoScoreCoral
+    RobotContainer : +CommandXboxController driverController
+    RobotContainer: -configureBindings()
+
+    namespace Subsystems{
+    class DriveSubsystem{
+        -SparkMax leftLeader
+        -SparkMax leftFollower
+        -SparkMax rightLeader
+        -SparkMax rightFollower
+        -RelativeEncoder m_EncoderLeft
+        -RelativeEncoder m_EncoderRight
+        -DifferentialDrive drive
+
+        -getEncoderMeters(RelativeEncoder enc)
+        +driveArcade(double xSpeed, double zRotation)
+        +getHeading()
+    }
+    class RollerSubsystem{
+        -TalonSRX rollerMotor
+        +runRoller(double forward, double reverse)
+    }
+    }
+    namespace Commands {
+        class AutoCommand{
+        }
+        class AutoScoreCoral{
+        }
+    }
 ```
