@@ -23,9 +23,9 @@ With command-based (object-oriented) programming, the tasks are treated separate
 ## Auto routine structure
 Pull up your XRP robot code.  You are going to create your own command.  Find the "commands" directory and right click on it.  At the bottom of the list you will see "Create a new class/command".  Then select "Command" and name it "TurnToAngle".
 
-![New Command](Lesson02_visuals\NewCommand.png)
+![New Command](.\Lesson02_visuals\NewCommand.png)
 
-![Select Command](Lesson02_visuals\SelectCommand.png)
+![Select Command](.\Lesson02_visuals\SelectCommand.png)
 
 ```java
 public class TurnToAngle extends Command {
