@@ -80,8 +80,18 @@ Now that you have a better feel for the system dynamics, we can discuss a more a
 [Image link: System Diagram](https://docs.wpilib.org/en/stable/_images/control-system-basics-ctrl-plus-plant.webp "System Diagram")
 
 ## Real world PID tuning exercise
-We are going to use Phoenix Tuner X to learn how to tune velocity and position control loops for a drive motor in a swerve module.  Hint: how did you tune the velocity controller for the flywheel?
+We are going to use Phoenix Tuner X to learn how to tune velocity and position control loops for a drive motor in a swerve module.
 
+Consider:
+* You will need to know what control mode you are tuning
+* You will need a "step change" in the velocity or position
+* You will need to plot the response to the step change over time (a chart)
+* You will need reasonable values as a starting point
+* What is your tuning procedure?
+* You will need to record your tuned values when complete
+* How do you turn it off if something goes wrong?
+
+Hint: how did you tune the velocity controller for the flywheel?
 * [Docs for Phoenix Tuner](https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/index.html)
 * [How to control devices with Tuner](https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/controlling-devices.html)
 * [Plotting the motor sensors](https://v6.docs.ctr-electronics.com/en/stable/docs/tuner/plotting.html)
